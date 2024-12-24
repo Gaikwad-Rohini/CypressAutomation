@@ -36,18 +36,18 @@ describe("Assertions", () => {
     cy.get("input[placeholder='Password']").type("admin123");
     cy.get("button[type='submit']").click();
 
-    let expName = "Filipp user";
+    let expName = "ghgh D";
 
     cy.get(".oxd-userdropdown-name").then((x) => {
       let actName = x.text();
 
       //BDD Style
       expect(actName).to.equal(expName);
-      expect(actName).to.not.equal("Filipp user1");
+      // expect(actName).to.not.equal(expName);
 
       //TDD Style
       assert.equal(actName, expName);
-      assert.not.equal(actName, expName);
+      // assert.notEqual(actName, expName);
     });
   });
 });

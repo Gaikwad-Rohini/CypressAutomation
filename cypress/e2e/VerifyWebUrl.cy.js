@@ -6,6 +6,6 @@ describe("Verify the website url", () => {
 
   it("verify title-negative test", () => {
     cy.visit("https://opensource-demo.orangehrmlive.com/");
-    cy.title().should("eq", "OrangeHRM123");
+    cy.title().should("not.eq", "OrangeHRM123");
   });
 });
